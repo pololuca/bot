@@ -5,6 +5,10 @@ A Simple chat bot includes bubbles and buttons.
 ## Getting Started
 
 bot-back project is needed to be backend of this project.
+```
+git clone https://github.com/pololuca/bot.git
+git clone https://github.com/pololuca/bot-back.git
+```
 
 
 ### Prerequisites
@@ -24,6 +28,8 @@ yarn install
 ```bash
 yarn run start
 ```
+
+Make sure backend setting is ready. Then the bot service should work.
 
 
 
