@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <title>index</title>
+    <script src="../util/jquery.js"></script>
+    <script type="module">
+        import container from '../templates/container.js';
+
+        window.onload = function () {
+            let isOpen = false;
+            window.BotObj = new container();
+            $('#openBotBtn').click(() => {
+                if (!isOpen) {
+                    isOpen = true;
+                    window.BotObj.openBot();
+                    $('#openBotBtn').addClass('rotate'); 
+                    $('.o-bot').addClass('open');
+                } else {
+                    isOpen = false;
+                    window.BotObj.closeBot();
+                    $('#openBotBtn').removeClass('rotate'); 
+                    $('.o-bot').removeClass('open'); 
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="ohb-entry"><button id="openBotBtn" class="ohb-entry-icon"></button></div>
+        </section>
+    </main>
+</body>
+
+</html>
